@@ -2,25 +2,40 @@
 <html>
 
 <head>
+    <title>Swapi People Listener</title>
     <script src = "./main.js" defer></script>
 </head>
 
 <body>
-    <style>#personInfo{
+    <style>
+    
+    #personInfo, #container{
         display: flex;
     }
+
     ul{ list-style-type: none; }
+
     #traits{
         text-align: right;
     }
+
     #traitCategories{
         font-weight: bold;
     }
+
+    #people {
+    margin-top: 18px;
+    }
     
     </style>
+
     <h1>Star Wars People!</h1>
-    <div id="people"></div>
-    <div id="personInfo"></div>
+
+    <div id="container">
+        <div id="people"></div>
+        <div id="personInfo"></div>
+    </div>
+
 </body>
 
 </html>
