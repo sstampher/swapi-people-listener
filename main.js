@@ -10,7 +10,13 @@ async function info(person){
             if(data.results[i].name === person){
             const infoCategories = Object.keys(data.results[i]);
             let infoCategoriesList = infoCategories.map(item => `<li>${item}</li>`)
-            personInfo.innerHTML = `${infoCategoriesList.join(' ')}`
+
+            const infoCategoriesText = Object.values(data.results[i]);
+            let infoCategoriesTextList = infoCategoriesText.map(item => `<li>${item}</li>`)
+
+
+            personInfo.innerHTML = `<ul id="traits">${infoCategoriesList.join(' ')}</ul>
+                                    <ul id="traits">${infoCategoriesTextList.join(' ')}</ul>`
        }
     }
     }                             
@@ -20,7 +26,6 @@ async function info(person){
     namesArr.push(`<li>${data.results[i].name}</li>`);
     }
     return namesArr.join(' ');
-    //people.innerHTML = `${namesArr.join(' ')}`;
 }
 info();
 
