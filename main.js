@@ -15,7 +15,7 @@ async function info(person){
             let infoCategoriesTextList = infoCategoriesText.map(item => `<li>${item}</li>`)
 
 
-            personInfo.innerHTML = `<ul id="traits">${infoCategoriesList.join(' ')}</ul>
+            personInfo.innerHTML = `<ul id="traitCategories">${infoCategoriesList.join(' ')}</ul>
                                     <ul id="traits">${infoCategoriesTextList.join(' ')}</ul>`
        }
     }
