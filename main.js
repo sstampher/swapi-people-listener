@@ -51,7 +51,9 @@ displayPeople();
 
 async function displayInfo(e){
     let personName = e.target.innerHTML;
-    console.log(await info(personName));
+    e.target.classList.add('bold');
+    await info(personName);
+    e.target.classList.remove('bold');
 }
 
 people.addEventListener('click', displayInfo);
